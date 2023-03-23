@@ -5,7 +5,7 @@
     // roadmap: federated avg rating from forks up and down the chain?
     
     bind = function(container, item) {
-        return container.dblclick(function() {
+        return container.on('dblclick', function() {
             return wiki.textEditor(container, item);
         });
     };
@@ -66,7 +66,7 @@
             _this.attr('href', '#');
             _this.attr('title', ['Rate as ', rating, ' star', (rating == 1 ? '' : 's')].join(''));
             
-            _this.mouseenter(function(){
+            _this.on('mouseenter', function(){
                 
                 // kill hover and reset based on current rating
                 var el = getStarElements(this);
@@ -77,7 +77,7 @@
                 
             });
             
-            _this.mouseleave(function(){
+            _this.on('mouseleave', function(){
                 
                 // kill hover and re-render stars
                 var el = getStarElements(this);
@@ -86,7 +86,7 @@
                 
             });
             
-            _this.click(function(){
+            _this.on('click', function(){
                 
                 // save clicked rating and re-render
                 var el = getStarElements(this);
