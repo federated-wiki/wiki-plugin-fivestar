@@ -26,9 +26,6 @@
   "bugs": {
     "url": "https://github.com/fedwrated-wiki/wiki-plugin-fivestar/issues"
   },
-  "engines": {
-    "node": "0.10"
-  },
   "dependencies": {
     "async": "^2.4.0",
     "csv-write-stream": "^2.0.0",
