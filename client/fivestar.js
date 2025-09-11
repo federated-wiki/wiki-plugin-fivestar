@@ -103,7 +103,7 @@
 
         container.addClass('radar-source')
         container.get(0).radarData = function(){
-            data = {}
+            var data = {}
             data[item.text] = parseInt(item.stars)
             return data
         }
